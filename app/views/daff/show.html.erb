@@ -1,0 +1,12 @@
+<h1 class="text-center"> welcome to data,<%= @user.name %> </h1>
+
+<%= flash[:notice] %>
+
+
+ <% @datum.each do |i| %>
+   <h1> <%= i.plan %> </h1>
+ <% end %>
+
+
+ <%= link_to "logout", logout_path %>
+ <%= link_to "create_data", data_path %>

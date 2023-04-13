@@ -1,0 +1,14 @@
+<h1>New Datum</h1>
+
+<%= form_for @datum, url: data_path do |f| %>
+  <div class="field">
+    <%= f.label :plan %>
+    <%= f.text_field :plan %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Save" %>
+  </div>
+<% end %>
+<h4> <%= link_to 'Logout', logout_path, method: :delete %> </h4>
+<h4> <%= link_to "data", data_path %> </h4>

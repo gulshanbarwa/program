@@ -1,0 +1,52 @@
+<div class="row col-lg-12">
+  <div class="card mt-5 mb-5">
+    <div class="card-body">
+      <h2 class="text-center">Sign up here</h2>
+    </div>
+  </div>
+
+  <%= form_for @user, url: create_path do |form| %>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="form-group">
+          <%= form.label :name, class: "mb-2" %>
+          <%= form.text_field :name, class: "form-control form-control-lg" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="form-group">
+          <%= form.label :contact, class: "mb-2" %>
+          <%= form.text_field :contact, class: "form-control form-control-lg" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="form-group">
+          <%= form.label :email, class: "mb-2" %>
+          <%= form.email_field :email, class: "form-control form-control-lg" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="form-group">
+          <%= form.label :password, class: "mb-2" %>
+          <%= form.password_field :password, class: "form-control form-control-lg" %>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 mt-4">
+        <%= form.submit "Save", class: "btn btn-primary btn-lg" %>
+      </div>
+    </div>
+  <% end %>
+</div>
